@@ -1,0 +1,189 @@
+/*----------　ページ全体　----------*/
+.management {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+/*----------　管理システム　----------*/
+.management__head {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/*----------　記入欄全体　----------*/
+.management__search {
+
+    width: 1230px;
+    border: solid 1px black;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+/*----------　各記入項目　-----------*/
+.form__label {
+    font-weight: bolder;
+    position: relative;
+    right: 120px;
+}
+
+/*----------　検索枠：一段目　-----------*/
+.management__top {
+    padding-top: 30px;
+    display: flex;
+}
+
+/*----------　検索枠：一段目：お名前　-----------*/
+.management__fullname input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    height: 15px;
+
+    appearance: none;
+}
+
+.management__fullname {
+    padding: 15px;
+    margin: 0;
+}
+
+/*----------　検索枠：一段目：性別　-----------*/
+.management__gender {
+    padding: 15px;
+    position: relative;
+    left: 100px;
+    top: 5px;
+}
+
+.form__label--gender {
+    font-weight: bolder;
+    position: relative;
+    padding-right: 5px;
+    right: 60px;
+}
+
+/*----------　検索枠：二段目：登録日　-----------*/
+.management__day input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    height: 15px;
+
+    appearance: none;
+}
+
+.management__day {
+    padding: 15px;
+    margin: 0;
+    text-align: left;
+}
+
+/*----------　検索枠：三段目：メールアドレス　-----------*/
+.management__email input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    height: 15px;
+
+    appearance: none;
+}
+
+.management__email {
+    text-align: left;
+    padding: 15px;
+    margin: 0;
+}
+
+.form__label--email {
+    font-weight: bolder;
+    position: relative;
+    right: 130px;
+    top: 5px;
+}
+
+.email__box {
+    position: relative;
+    left: 53px;
+    bottom: 25px;
+}
+
+/*----------　検索ボタン　-----------*/
+.management__button--submit {
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*----------　検索結果の表示欄　-----------*/
+.list__content {
+    width: 1130px;
+}
+
+.list__content--text {
+    border-bottom: solid 1px black;
+}
+
+.list__content--id {
+    font-weight: bold;
+}
+
+.list__content--fullname {
+    position: relative;
+    left: 20px;
+    font-weight: bold;
+}
+
+.list__content--gender {
+    position: relative;
+    left: 268px;
+    font-weight: bold;
+}
+
+.list__content--email {
+    position: relative;
+    left: 540px;
+    font-weight: bold;
+}
+
+.list__content--opinion {
+    position: relative;
+    left: 730px;
+    font-weight: bold;
+}
+
+.list__item--info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-info__item {
+    flex-basis: 20%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.list__delete {
+    position: relative;
+    bottom: 40px;
+    left: 1180px;
+}
+
+.sv.w-5.h-5 {
+    width: 30px;
+    height: 30px;
+}

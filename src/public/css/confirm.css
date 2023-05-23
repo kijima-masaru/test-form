@@ -1,0 +1,84 @@
+/*----------　ページ全体　----------*/
+.confirm__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+/*----------　内容確認　----------*/
+.confirm__head {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/*----------　内容全体　----------*/
+.form {
+    margin: 0 auto;
+    width: 70%;
+}
+/*----------　内容リスト全体　----------*/
+.confirm__table--inner {
+    width: 100%;
+}
+
+.confirm__table--header {
+    padding: 15px;
+    width: 20%;
+    font-weight: bold;
+    text-align: left;
+}
+
+.confirm__table--text {
+    padding: 15px;
+    text-align: left;
+}
+
+.confirm__table--text input {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.confirm__table--row:last-child .confirm__table--header,
+.confirm__table--row:last-child .confirm__table--text {
+    border-bottom-width: 0;
+}
+
+/*----------　ご意見　----------*/
+.confirm__table--opinion input {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.confirm__table-opinion {
+    padding: 15px;
+    word-wrap: break-word;
+}
+
+.confirm__opinion {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*----------　送信ボタン　----------*/
+.form__button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form__button--submit {
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*----------　修正する　----------*/
+.form__back {
+    text-align: center;
+}
