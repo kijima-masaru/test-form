@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
+use Illuminate\Http\Request;
 use App\Models\Contact;
 
 
@@ -27,7 +28,7 @@ class ContactController extends Controller
     }
 
     //　内容確認ページの送信ボタンクリック時の処理　//
-    public function store(ContactRequest $request)
+    public function store(Request $request)
     {
         $contact = $request->only(['family__name', 'first__name', 'fullname', 'gender', 'email', 'postcode', 'address', 'building_name', 'opinion']);
 
