@@ -61,6 +61,11 @@
     top: 5px;
 }
 
+.management__gender input {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
 .form__label--gender {
     font-weight: bolder;
     position: relative;
@@ -178,12 +183,18 @@
 }
 
 .list__delete {
+    width: 1230px;
     position: relative;
     bottom: 40px;
     left: 1180px;
 }
 
-.sv.w-5.h-5 {
-    width: 30px;
-    height: 30px;
+
+/*----------　ページネーションmargin　-----------*/
+.pagination__info {
+    margin-top: 30px;
+}
+
+.pagination__links {
+    margin-top: 20px;
 }

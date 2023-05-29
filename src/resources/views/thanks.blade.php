@@ -14,7 +14,7 @@
     <main>
         <div class="thanks__content">
             <div class="thanks__head">
-                <h2>ご意見いただきありがとうございました。</h2>
+                <h1>ご意見いただきありがとうございました。</h1>
             </div>
             <div class="thanks__button">
                 <button class="thanks__button--submit" type="submit">トップページへ</button>

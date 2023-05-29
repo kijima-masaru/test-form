@@ -14,7 +14,7 @@
     <main>
         <div class="confirm__content">
             <div class="confirm__head">
-                <h2>内容確認</h2>
+                <h2>内容確認</h1>
             </div>
             <form class="form" action="/contacts" method="post">
                 @csrf
@@ -23,7 +23,9 @@
                         <tr class="confirm__table--row">
                             <th class="confirm__table--header">お名前</th>
                             <td class="confirm__table--text">
-                                <input type="text" name="fullname" value="{{ $contact['fullname'] }}" readonly/>
+                                <input type="hidden" name="family__name" value="{{ $contact['family__name'] }}" readonly/>
+                                <input type="hidden" name="first__name" value="{{ $contact['first__name'] }}" readonly/>
+                                <input type="text" name="fullname" value="{{ $contact['family__name'] . ' ' . $contact['first__name'] }}" readonly/>
                             </td>
                         </tr>
                         <tr class="confirm__table--row">
@@ -59,7 +61,8 @@
                         <tr class="confirm__table--row">
                             <th class="confirm__table--header">ご意見</th>
                             <td class="confirm__table--opinion">
-                                <div class="confirm__opinion">{{ $contact['opinion'] }}</div>
+                            <input type="hidden" name="opinion" value="{{ $contact['opinion'] }}" readonly/>
+                            <div class="confirm__opinion">{{ $contact['opinion'] }}</div>
                             </td>
                         </tr>
                     </table>

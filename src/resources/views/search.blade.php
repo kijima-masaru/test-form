@@ -5,13 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>管理システム</title>
+    <style>
+        svg.w-5.h-5 {
+            width: 20px;
+            height: 20px;
+        }
+
+        .pagination {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pagination li {
+        list-style: none;
+        margin: 0 5px;
+    }
+    </style>
     <link rel="stylesheet" href="css/search.css" />
 </head>
 <body>
     <main>
         <div class="management">
             <div class="management__head">
-                <h2>管理システム</h2>
+                <h1>管理システム</h1>
             </div>
             <div class="management__search">
                 <form class="form" method="GET" action="{{ route('search') }}">
@@ -22,9 +38,9 @@
                         </div>
                         <div class="management__gender">
                             <span class="form__label--gender">性別</span>
-                            <input type="radio" name="gender" value="全て" {{ request('gender') === '全て' ? 'checked' : '' }} style="transform:scale(3.0)">　全て　
-                            <input type="radio" name="gender" value="男性" {{ request('gender') === '男性' ? 'checked' : '' }} style="transform:scale(3.0)">　男性　
-                            <input type="radio" name="gender" value="女性" {{ request('gender') === '女性' ? 'checked' : '' }} style="transform:scale(3.0)">　女性　
+                            <input type="radio" name="gender" value="全て" {{ request('gender') === '全て' ? 'checked' : '' }} style="transform:scale(3.0)">全て
+                            <input type="radio" name="gender" value="男性" {{ request('gender') === '男性' ? 'checked' : '' }} style="transform:scale(3.0)">男性
+                            <input type="radio" name="gender" value="女性" {{ request('gender') === '女性' ? 'checked' : '' }} style="transform:scale(3.0)">女性
                         </div>
                     </div>
                     <div class="management__day">
@@ -70,6 +86,10 @@
                         });
                     </script>
                 </form>
+            </div>
+            <div class="pagination" style="display: flex; justify-content: space-between;">
+                <span class="pagination__info">全{{ $contacts->total() }}件中 {{ $contacts->firstItem() }}件〜{{ $contacts->lastItem() }}件</span>
+                <span class="pagination__links">{{ $contacts->links('vendor.pagination.default') }}</span>
             </div>
             <div class="list__content">
                 <div class="list__content--top">

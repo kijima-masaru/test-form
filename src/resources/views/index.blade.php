@@ -14,7 +14,7 @@
     <main>
         <div class="form__content">
             <div class="form__head">
-                <h2>お問い合わせ</h2>
+                <h1>お問い合わせ</h1>
             </div>
             <form class="form" action="/contacts/confirm" method="post">
                 @csrf
@@ -32,8 +32,8 @@
                                     <p class="input__text">例）山田</p>
                                 </div>
                                 <div class="form__input--name">
-                                    　　<input type="text" name="first__name" value="{{ old('first__name') }}"/>
-                                    <p class="input__text">　　例）太郎</p>
+                                    <input type="text" name="first__name" value="{{ old('first__name') }}"/>
+                                    <p class="input__text">例）太郎</p>
                                 </div>
                             </div>
                             <div class="form__error" style="height: 20px; color: red; text-align: left;">
@@ -58,8 +58,8 @@
                         </div>
                         <div class="form__group--content">
                             <div class="form__input--gender">
-                                <input type="radio" name="gender" value="男性" checked style="transform:scale(3.0)">　男性　
-                                <input type="radio" name="gender" value="女性" style="transform:scale(3.0)">　女性　
+                                <input type="radio" name="gender" value="男性" checked style="transform:scale(3.0)">男性
+                                <input type="radio" name="gender" value="女性" style="transform:scale(3.0)">女性
                             </div>
                             <div class="form__error" style="height: 20px; color: red; text-align: left;">
                                 @error('gender')
@@ -98,8 +98,8 @@
                         </div>
                         <div class="form__group--content">
                             <div class="form__input--post">
-                                〒　<input type="text" name="postcode" value="{{ old('postcode') }}"/>
-                                <p class="input__text">　　例）123-4567</p>
+                                〒<input type="text" name="postcode" value="{{ old('postcode') }}"/>
+                                <p class="input__text">例）123-4567</p>
                             </div>
                             <div class="form__error" style="height: 20px; color: red; text-align: left;">
                                 @error('postcode')

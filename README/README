@@ -11,10 +11,10 @@ thanks.png
 search.png
 
 ## ページURL
-トップページ（お問い合わせページ：http//localhost
+トップページ（お問い合わせページ）：http//localhost
 確認ページ：http://localhost/contacts/confirm
-サンクスページ: http://localhost/contacts
-管理ページ: http://localhost/search
+サンクスページ：http://localhost/contacts/thanks
+管理ページ：http://localhost/search
 
 ## 作成した目的
 1. 顧客サポート: お客様からの質問や問題に対応するために、フォームを使用してお問い合わせを受け付けるため。顧客が商品やサービスに関する疑問やトラブルを報告し、それに対して迅速かつ適切に対応することが目的。

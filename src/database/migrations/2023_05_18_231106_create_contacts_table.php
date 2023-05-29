@@ -23,7 +23,7 @@ class CreateContactsTable extends Migration
             $table->char('postcode', 8);
             $table->string('address');
             $table->string('building_name')->nullable();
-            $table->text('opinion');
+            $table->text('opinion')->nullable();
             $table->timestamps();
         });
     }
