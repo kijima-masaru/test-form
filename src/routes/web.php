@@ -18,6 +18,7 @@ use App\Http\Middleware\ConvertPostcodeToHalfWidth;
 */
 
 Route::get('/', [ContactController::class, 'index']);
+Route::get('/api/address/{postcode}', 'AddressController@getAddressByPostcode');
 Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
 Route::post('/contacts', [ContactController::class, 'store']);
 Route::post('/contacts', [ContactController::class, 'store'])->middleware('convert.postcode');

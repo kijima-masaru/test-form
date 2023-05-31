@@ -167,7 +167,7 @@
                         </div>
                     </div>
                 </div>
-                <!--　確認ボタンの作成-->
+                <!--　確認ボタンの作成　-->
                 <div class="form__button">
                     <button class="form__button--submit" type="submit">確認</button>
                 </div>
@@ -175,5 +175,29 @@
         </div>
     </main>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('input[name="postcode"]').on('blur', function() {
+            var postcode = $(this).val();
+            if (postcode) {
+                $.ajax({
+                    url: 'https://api.zipaddress.net/',
+                    data: {
+                        zipcode: postcode
+                    },
+                    success: function(response) {
+                        if (response.code === 200) {
+                            var address = response.data.fullAddress;
+                            $('input[name="address"]').val(address);
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+</html>
 
 </html>
