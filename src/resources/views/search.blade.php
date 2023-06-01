@@ -105,10 +105,12 @@
                     <div class="list__item">
                         <p class="list__item--info">
                             <span class="item-info__id">{{ $contact->id }}</span>
-                            <span class="item-info__item">{{ $contact->fullname }}</span>
-                            <span class="item-info__item">{{ $contact->gender }}</span>
-                            <span class="item-info__item">{{ $contact->email }}</span>
-                            <span class="item-info__item">{{ $contact->opinion }}</span>
+                            <span class="item-info__item" data-opinion="{{ $contact->fullname }}">{{ $contact->fullname }}</span>
+                            <span class="item-info__item" data-opinion="{{ $contact->gender }}">{{ $contact->gender }}</span>
+                            <span class="item-info__item">
+                                <span class="truncated" data-opinion="{{ $contact->email }}">{{ $contact->email }}</span>
+                            </span>
+                            <span class="item-info__item" onmouseover="this.style.whiteSpace = 'normal'">{{ $contact->opinion }}</span>
                         </p>
                         <form class="list__delete" method="POST" action="{{ route('delete', $contact->id) }}">
                             @csrf
