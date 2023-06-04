@@ -17,19 +17,15 @@ class ContactController extends Controller
 
     //　お問い合わせフォームの確認ボタンクリック時の処理　//
     public function confirm(ContactRequest $request)
-{
-    $contact = $request->validated();
+    {
+        //　取得した入力情報を$contactに格納　//
+        $contact = $request->only(['family__name', 'first__name', 'gender', 'email', 'postcode', 'address', 'building_name', 'opinion']);
 
-    $contact['fullname'] = $contact['family__name'] . ' ' . $contact['first__name'];
+        //　'family__name'と'first__name'を結合して、$contactの中に'fullname'という新しいキーを作成する　//
+        $contact['fullname'] = $contact['family__name'] . ' ' . $contact['first__name'];
 
-    if ($request->expectsJson()) {
-        return response()->json([
-            'errors' => [],
-        ]);
+        return view('confirm', compact('contact'));
     }
-
-    return view('confirm', compact('contact'));
-}
 
     //　内容確認ページの送信ボタンクリック時の処理　//
     public function store(Request $request)
